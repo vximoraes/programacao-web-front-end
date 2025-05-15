@@ -6,7 +6,7 @@
 | Poetry In Motion           | https://vximoraes.github.io/poetry-in-motion/                  | https://github.com/vximoraes/poetry-in-motion                      |  
 | Tabela de Usuários         | https://vximoraes.github.io/tabela-de-usuarios/                | https://github.com/vximoraes/tabela-de-usuarios                    |  
 | Formulário de Cadastro     | https://vximoraes.github.io/formulario-de-cadastro/            | https://github.com/vximoraes/formulario-de-cadastro                |  
+| Open Source Projects Page  | https://vximoraes.github.io/open-source-projects-page/         | https://github.com/vximoraes/open-source-projects-page             |  
 | Fazenda                    | https://vximoraes.github.io/fazenda/                           | https://github.com/vximoraes/fazenda                               |  
 | FSLAB                      | https://vximoraes.github.io/fslab-page/                        | https://github.com/vximoraes/fslab-page                            |  
 | Cidades Inteligentes       | https://vximoraes.github.io/cidades-inteligentes-page/         | https://github.com/vximoraes/cidades-inteligentes-page             |  
-| Open Source Projects Page  | https://vximoraes.github.io/open-source-projects-page/         | https://github.com/vximoraes/open-source-projects-page             |  
