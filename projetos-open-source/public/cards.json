@@ -1,0 +1,106 @@
+[
+    {
+        "id": 1,
+        "icone": "../public/images/chromium.png",
+        "cor": "#B6D5FF",
+        "titulo": "Chromium",
+        "descricao": "Projeto de navegador de código aberto que serve de base para o Google Chrome e outros navegadores modernos.",
+        "tecnologias": [
+            "Java",
+            "Web",
+            "C++"
+        ],
+        "link": "/chromium"
+    },
+    {
+        "id": 2,
+        "icone": "../public/images/react.png",
+        "cor": "#C5F3FF",
+        "titulo": "React",
+        "descricao": "Biblioteca JavaScript para construir interfaces de usuário reativas, criada pelo Facebook e usada em milhares de aplicações web.",
+        "tecnologias": [
+            "Typescript",
+            "JSX",
+            "Web"
+        ],
+        "link": "/react"
+    },
+    {
+        "id": 3,
+        "icone": "../public/images/ubuntu.png",
+        "cor": "#F6C29D",
+        "titulo": "Ubuntu",
+        "descricao": "Distribuição Linux baseada em Debian, voltada para usabilidade, segurança e atualização frequente.",
+        "tecnologias": [
+            "C",
+            "Python",
+            "Bash"
+        ],
+        "link": "/ubuntu"
+    },
+    {
+        "id": 4,
+        "icone": "../public/images/git.png",
+        "cor": "#F7B7AD",
+        "titulo": "Git",
+        "descricao": "Sistema de controle de versões distribuído, eficiente para rastrear mudanças em projetos de software.",
+        "tecnologias": [
+            "C",
+            "Shell Script",
+            "Perl"
+        ],
+        "link": "/git"
+    },
+    {
+        "id": 5,
+        "icone": "../public/images/android.png",
+        "cor": "#B6F5D5",
+        "titulo": "Android",
+        "descricao": "Sistema operacional móvel desenvolvido pelo Google, usado em bilhões de dispositivos ao redor do mundo.",
+        "tecnologias": [
+            "Java",
+            "Kotlin",
+            "C++"
+        ],
+        "link": "/android"
+    },
+    {
+        "id": 6,
+        "icone": "../public/images/typescript.png",
+        "cor": "#B9DBFD",
+        "titulo": "Typescript",
+        "descricao": "Superset do JavaScript que adiciona tipagem estática e recursos modernos para desenvolvimento robusto.",
+        "tecnologias": [
+            "JavaScript",
+            "TypeScript",
+            "Node"
+        ],
+        "link": "/typescript"
+    },
+    {
+        "id": 7,
+        "icone": "../public/images/tensorflow.png",
+        "cor": "#FAE5B1",
+        "titulo": "Tensorflow",
+        "descricao": "Biblioteca de código aberto do Google para computação numérica e aprendizado de máquina com redes neurais.",
+        "tecnologias": [
+            "Python",
+            "CUDA",
+            "C++"
+        ],
+        "link": "/tensorflow"
+    },
+    {
+        "id": 8,
+        "icone": "../public/images/docusaurus.png",
+        "cor": "#ADF5BF",
+        "titulo": "Docusaurus",
+        "descricao": "Gerador de sites estáticos focado em documentação técnica, criado pelo Facebook.",
+        "tecnologias": [
+            "JavaScript",
+            "React",
+            "Markdown"
+        ],
+        "link": "/docusaurus"
+    }
+]
