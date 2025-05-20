@@ -1,8 +1,89 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
 }
 
-.titulo {
-  color: blueviolet;
+.cards-container {
+  display: flex;
+  margin-top: 30px;
+  gap: 45px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+
+.card:hover {
+    scale: 105%;
+    transition: 0.5s;
+}
+
+.imagem-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.imagem-card img {
+    padding: 30px 20px 30px 20px;
+    width: 90px;
+}
+
+.titulo-card {
+    font-size: 20px;
+    padding: 20px 20px 5px 20px;
+    font-weight: bold;
+}
+
+.descricao-card {
+    padding: 5px 20px 10px 20px;
+}
+
+.tags-card {
+    padding: 50px 20px 10px 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px; 
+}
+
+.tag-card {
+    margin-right: 0;
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.projeto-card {
+    padding: 20px 20px 30px 20px;
+}
+
+.projeto-card span {
+    color: rgb(38, 109, 241);
+    padding: 8px 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.projeto-card span:hover {
+    color: white;
+    background-color: rgb(38, 109, 241);
+    transition: 0.5s;
+    cursor: grab;
 }
