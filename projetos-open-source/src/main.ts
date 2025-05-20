@@ -21,8 +21,8 @@ async function carregarCards() {
     <div class="imagem-card" style="background-color: ${card.cor};"><img src="/${card.icone}"></div>
     <div class="titulo-card">${card.titulo}</div>
     <div class="descricao-card">${card.descricao}</div>
-    <div class="tags-card">${card.tecnologias.map(tecnologia => `
-      <div class="tag-card">${tecnologia}</div>`).join('')}
+    <div class="tags-card">
+      ${card.tecnologias.map(tecnologia => `<div class="tag-card">${tecnologia}</div>`)}
     </div>
     <div class="projeto-card"><span>Ver projeto</span></div>
     `
