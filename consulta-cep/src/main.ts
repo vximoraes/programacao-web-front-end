@@ -1,64 +1,85 @@
 import './style.css'
 
-const cep = document.querySelector<HTMLInputElement>('#cep')!
-const logradouro = document.querySelector<HTMLInputElement>('#logradouro')!
-const numero = document.querySelector<HTMLInputElement>('#numero')!
-const bairro = document.querySelector<HTMLInputElement>('#bairro')!
-const estado = document.querySelector<HTMLInputElement>('#estado')!
-const estados = document.querySelector<HTMLInputElement>('#estados')!
-const cidade = document.querySelector<HTMLInputElement>('#cidade')!
-const cidades = document.querySelector<HTMLInputElement>('#cidades')!
+const cepInput = document.querySelector<HTMLInputElement>('#cep')!;
+const logradouroInput = document.querySelector<HTMLInputElement>('#logradouro')!;
+const numeroInput = document.querySelector<HTMLInputElement>('#numero')!;
+const bairroInput = document.querySelector<HTMLInputElement>('#bairro')!;
+const estadoSelect = document.querySelector<HTMLSelectElement>('#estados')!;
+const cidadeSelect = document.querySelector<HTMLSelectElement>('#cidades')!;
 
-cep.addEventListener('blur', () => {
-    consultarCep()
-})
+popularEstados();
 
-function limparFormulario() {
-    logradouro.value = ''
-    numero.value = ''
-    bairro.value = ''
-    estado.value = ''
-    cidade.value = ''
+cepInput.addEventListener('blur', preencherEnderecoPorCep);
+estadoSelect.addEventListener('change', atualizarCidades);
+
+async function popularEstados() {
+    try {
+        const estados = await obterEstados();
+        estados.forEach(({ sigla, nome }: { sigla: string; nome: string }) => {
+            const option = document.createElement('option');
+            option.value = sigla;
+            option.textContent = nome;
+            estadoSelect.appendChild(option);
+        });
+    } catch {
+        console.error('Erro ao carregar estados.');
+    }
 }
 
-async function buscarEstados() {
-    const result = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
-    const body = await result.json()
-    body.forEach((estado: { sigla: string, nome: string }) => {
-        const estadoOption = document.createElement('option')
-
-        estadoOption.innerHTML = estado.nome
-        estados.appendChild(estadoOption)
-    })
+async function atualizarCidades() {
+    if (!estadoSelect.value) return;
+    try {
+        const cidades = await obterCidades(estadoSelect.value);
+        cidades.forEach(({ nome }: { nome: string }) => {
+            const option = document.createElement('option');
+            option.value = nome;
+            option.textContent = nome;
+            cidadeSelect.appendChild(option);
+        });
+    } catch {
+        console.error('Erro ao carregar cidades.');
+    }
 }
 
-estados.addEventListener('change', async () => {
-    const estado = estados.value
-    const result = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estado}/municipios`)
-    const body = await result.json()
+async function preencherEnderecoPorCep() {
+    try {
+        const dados = await buscarCep(cepInput.value);
+        logradouroInput.value = dados.street || '';
+        bairroInput.value = dados.neighborhood || '';
+        estadoSelect.value = dados.state || '';
+        await atualizarCidades();
+        cidadeSelect.value = dados.city || '';
+        numeroInput.focus();
+    } catch {
+        console.error('CEP não encontrado.');
+    }
+}
 
-    estados.innerHTML = ''
+// Funções utilitárias de requisição.
 
-    body.array.forEach((cidade: { id: number, nome: string }) => {
-        const cidadeOption = document.createElement('option')
+async function buscarCep(cep: string) {
+    const resp = await fetch(`https://brasilapi.com.br/api/cep/v1/${cep}`);
+    if (!resp.ok) {
+        console.error('Erro ao buscar CEP');
+        return {};
+    }
+    return resp.json();
+}
 
-        cidadeOption.value = cidade.id.toString()
-        cidadeOption.textContent = cidade.nome
+async function obterEstados() {
+    const resp = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome');
+    if (!resp.ok) {
+        console.error('Erro ao buscar estados');
+        return [];
+    }
+    return resp.json();
+}
 
-        cidades.appendChild(cidadeOption)
-    });
-})
-
-buscarEstados()
-
-async function consultarCep() {
-    const result = await fetch(`https://brasilapi.com.br/api/cep/v1/${cep.value}`)
-    const body = await result.json()
-    limparFormulario()
-    numero.focus()
-    logradouro.value = body.street
-    bairro.value = body.neighborhood
-    estado.value = body.state
-    cidade.value = body.city
-    buscarEstados()
+async function obterCidades(siglaEstado: string) {
+    const resp = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${siglaEstado}/municipios?orderBy=nome`);
+    if (!resp.ok) {
+        console.error('Erro ao buscar cidades');
+        return [];
+    }
+    return resp.json();
 }
