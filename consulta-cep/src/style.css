@@ -85,11 +85,13 @@ form {
   gap: 1.1em;
   margin: 2em auto;
   transition: 0.5s;
+  width: 420px;
+  box-sizing: border-box;
 }
 
 form:hover {
   transition: 0.5s;
-  scale: 103%;
+  scale: 102%;
 }
 
 form div {
@@ -112,6 +114,9 @@ form input[type="number"],
 form input[type="email"],
 form input[type="password"],
 form select {
+  width: 100%;
+  box-sizing: border-box;
+
   padding: 10px 100px 10px 10px;
   border-radius: 8px;
   border: 1.2px solid #dadce0;
