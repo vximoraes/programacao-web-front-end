@@ -1,0 +1,119 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.central-card {
+    background: #fff;
+    padding: 40px 40px 32px 40px;
+    border-radius: 14px;
+    box-shadow: 0 3px 5px 0 rgba(60, 64, 67, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    max-width: 95vw;
+    width: 370px;
+    transition: 0.5s;
+}
+
+.central-card:hover {
+    transition: 0.5s;
+    scale: 102%;
+}
+
+.imagem {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #e0e7ef;
+    box-shadow: 0 3px 5px 0 rgba(60, 64, 67, 0.15);
+}
+
+.titulo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #22223b;
+    margin-bottom: 3px;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+.seletor-recarregar {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+select,
+input[type="submit"] {
+    font-size: 16px;
+    padding: 11px 19px;
+    border-radius: 5px;
+    border: 1px solid #b6c6e3;
+    margin: 8px 0;
+    outline: none;
+    transition: box-shadow 0.2s, border 0.2s;
+    background: #f8fafc;
+}
+
+select {
+    flex: 1;
+    min-width: 0;
+}
+
+input[type="submit"] {
+    background: #4299e1;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    min-width: 110px;
+}
+
+input[type="submit"]:hover {
+    background: #3182ce;
+}
+
+select:focus,
+input[type="submit"]:focus {
+    border: 1.5px solid #4299e1;
+    box-shadow: 0 0 0 2px #90cdf4;
+}
+
+@media (max-width: 500px) {
+    .central-card {
+        padding: 16px 8px 16px 8px;
+        width: 98vw;
+        min-width: unset;
+        gap: 19px;
+    }
+
+    .imagem {
+        width: 90vw;
+        height: 90vw;
+        max-width: 320px;
+        max-height: 320px;
+    }
+}

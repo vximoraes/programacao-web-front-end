@@ -1,4 +1,4 @@
-import './style.css'
+import './style.css';
 
 const cepInput = document.querySelector<HTMLInputElement>('#cep')!;
 const logradouroInput = document.querySelector<HTMLInputElement>('#logradouro')!;
