@@ -1,0 +1,3 @@
+json-server --watch dados.json
+
+Utilizando JSON server como fonte de dados e e funções para manipular
