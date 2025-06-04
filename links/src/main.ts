@@ -1,4 +1,4 @@
-import '../public/css/style.css'
+import '../public/assets/css/style.css'
 
 const params = new URLSearchParams(window.location.search)
 const id = params.get("id")
