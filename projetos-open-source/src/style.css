@@ -47,7 +47,7 @@
 }
 
 .card:hover {
-    scale: 105%;
+    scale: 101%;
     transition: 0.5s;
 }
 
