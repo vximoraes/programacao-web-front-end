@@ -1,0 +1,7 @@
+1. Quando a tela for menor que 768px, esconda os itens da lista de links e mostre um ícone de hambúrguer.
+
+2. Ao clicar no ícone hambúrguer, os itens da lista de links são mostrados. O ícone deve ser trocado para um ícone de fechar o menu (X).
+
+3. Ao redimencionar a tela, é necessário mostrar/esconder a lista de links.
+
+4. Criar uma animação ao mostrar/esconder a lista de links.
