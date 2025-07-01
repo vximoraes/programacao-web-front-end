@@ -1,16 +1,6 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .menu {
-    padding: 4px;
-    background-color: blueviolet;
+    padding: 8px;
+    background-color: #2e7d32;
     list-style: none;
     transition: max-height 0.3s ease, opacity 0.3s ease;
     overflow: hidden;
@@ -27,13 +17,16 @@ body {
 .menu>li>a {
     text-decoration: none;
     color: white;
-    background-color: blueviolet;
+    background-color: transparent;
     display: block;
-    padding: 4px;
+    padding: 12px 16px;
+    transition: background-color 0.2s ease;
+    transition: 0.5s;
 }
 
 .menu>li>a:hover {
-    background-color: rgb(160, 89, 226);
+    background-color: #4caf50;
+    transition: 0.5s;
 }
 
 .menu.show {
@@ -50,10 +43,19 @@ body {
 
 .botao {
     display: none;
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     cursor: pointer;
-    margin: 8px;
+    margin: 10px;
+    background-color: #2e7d32;
+    border-radius: 2px;
+    padding: 6px;
+    transition: 0.5s;
+}
+
+.botao:hover {
+    background-color: #4caf50;
+    transition: 0.5s;
 }
 
 @media (max-width: 767px) {
@@ -79,7 +81,27 @@ body {
         max-height: none;
         opacity: 1;
         pointer-events: auto;
+        background-color: transparent;
+        border-radius: 0;
+        padding: 0;
     }
+    
+    .menu>li>a {
+        background-color: transparent;
+        border-radius: 0;
+        margin: 0;
+        padding: 10px 20px;
+        color: #2e7d32;
+        font-weight: 500;
+        transition: 0.5s;
+    }
+    
+    .menu>li>a:hover {
+        background-color: #2e7d32;
+        color: white;
+        transition: 0.5s;
+    }
+    
     .botao {
         display: none;
     }

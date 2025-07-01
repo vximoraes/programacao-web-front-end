@@ -1,4 +1,4 @@
-import './style.css'
+import '../public/assets/css/style.css'
 
 const botao = document.querySelector<HTMLImageElement>("#botao")!
 const menu = document.querySelector<HTMLUListElement>("#menu")!
