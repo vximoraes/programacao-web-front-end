@@ -1,40 +1,36 @@
 import '../public/assets/css/style.css'
 
-const botao = document.querySelector<HTMLImageElement>("#botao")!
-const menu = document.querySelector<HTMLUListElement>("#menu")!
-
-function isMobile() {
-    return window.innerWidth < 768
-}
-
-function setMenuState(open: boolean) {
-    if (isMobile()) {
-        menu.classList.toggle("show", open)
-        menu.classList.toggle("hide", !open)
-        menu.style.display = open ? "block" : "none"
-        botao.src = open
-            ? "./public/assets/images/x.svg"
-            : "./public/assets/images/align-justify.svg"
-    } else {
-        menu.classList.remove("show", "hide")
-        menu.style.display = "flex"
-        botao.src = "./public/assets/images/align-justify.svg"
-    }
-}
-
+// Menu mobile
+const botao = document.querySelector("#botao") as HTMLImageElement
+const menu = document.querySelector("#menu") as HTMLUListElement
 let menuOpen = false
 
-botao.addEventListener("click", (event) => {
-    event.preventDefault()
-    menuOpen = !menuOpen
-    setMenuState(menuOpen)
-})
-
-window.addEventListener("resize", () => {
-    if (!isMobile()) {
-        menuOpen = false
+// Função para alternar menu mobile
+function toggleMenu() {
+    if (window.innerWidth <= 768) {
+        menuOpen = !menuOpen
+        menu.classList.toggle("show", menuOpen)
+        botao.src = menuOpen ? "./public/assets/images/x.svg" : "./public/assets/images/align-justify.svg"
     }
-    setMenuState(menuOpen)
+}
+
+// Event listeners
+botao?.addEventListener("click", toggleMenu)
+
+// Fechar menu ao redimensionar
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        menuOpen = false
+        menu.classList.remove("show")
+        botao.src = "./public/assets/images/align-justify.svg"
+    }
 })
 
-setMenuState(false)
+// Scroll suave para links âncora
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault()
+        const target = document.querySelector(link.getAttribute('href')!)
+        target?.scrollIntoView({ behavior: 'smooth' })
+    })
+})
