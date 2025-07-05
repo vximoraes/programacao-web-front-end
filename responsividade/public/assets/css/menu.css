@@ -2,8 +2,6 @@
     padding: 0;
     background-color: #1b5e20;
     list-style: none;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    max-height: none;
     opacity: 1;
     display: flex;
     flex-wrap: wrap;
@@ -91,7 +89,7 @@
 
 @media (min-width: 769px) {
     .menu {
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         gap: 10px;
     }
