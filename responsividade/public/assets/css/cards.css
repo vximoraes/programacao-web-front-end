@@ -1,0 +1,62 @@
+.campus-grid,
+.voices-grid,
+.macroprojetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.campus-card,
+.voice-card,
+.projeto-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.campus-card:hover,
+.voice-card:hover,
+.projeto-card:hover {
+    transform: translateY(-5px);
+}
+
+.campus-card img,
+.voice-card img,
+.projeto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.voice-content {
+    padding: 20px;
+}
+
+.voice-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.voice-content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.projeto-logo {
+    height: 120px !important;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.projeto-card h3 {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2e7d32;
+    text-align: center;
+}

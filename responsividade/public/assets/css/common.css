@@ -1,0 +1,24 @@
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2e7d32;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.news-section,
+.campus-section,
+.voices-section,
+.macroprojetos-section,
+.comunicados-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.news-section:nth-child(even),
+.campus-section:nth-child(even),
+.voices-section:nth-child(even),
+.macroprojetos-section:nth-child(even),
+.comunicados-section:nth-child(even) {
+    background: #f8f9fa;
+}

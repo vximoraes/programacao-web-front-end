@@ -1,0 +1,111 @@
+.main-header {
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.institution-info h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.institution-info p {
+    font-size: 14px;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header-right .gov-accessibility {
+    display: flex;
+    gap: 10px;
+    align-self: center;
+}
+
+.header-right .gov-accessibility a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.header-right .gov-accessibility a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.search-container {
+    display: flex;
+    background: white;
+    border-radius: 25px;
+    padding: 8px 15px;
+    min-width: 300px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-link:hover {
+    background: rgba(255,255,255,0.3);
+}

@@ -1,0 +1,46 @@
+.gov-bar {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    font-size: 12px;
+    padding: 8px 0;
+}
+
+.gov-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gov-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gov-logo {
+    height: 20px;
+}
+
+.gov-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.gov-nav a, .gov-accessibility a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.gov-nav a:hover, .gov-accessibility a:hover {
+    opacity: 0.8;
+}
+
+.gov-accessibility {
+    display: flex;
+    gap: 15px;
+}

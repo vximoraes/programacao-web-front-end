@@ -1,0 +1,31 @@
+.comunicados-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comunicado-item {
+    display: flex;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comunicado-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.comunicado-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.comunicado-content p {
+    color: #666;
+    line-height: 1.6;
+}
